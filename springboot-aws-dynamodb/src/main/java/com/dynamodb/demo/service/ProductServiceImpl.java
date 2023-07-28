@@ -3,7 +3,8 @@ package com.dynamodb.demo.service;
 import java.util.List;
 import java.util.Optional;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,7 @@ import com.dynamodb.demo.response.Response;
 @Service
 public class ProductServiceImpl implements ProductService {
 
-	private static final Logger LOG = Logger.getLogger(ProductServiceImpl.class);
+	private static Logger LOG = LoggerFactory.getLogger(ProductServiceImpl.class);
 
 	@Autowired
 	ProductRepository productRepository;
